@@ -18,7 +18,7 @@
 base_dir=$(dirname $0)/..
 
 # Production jars
-export CLASSPATH=$CLASSPATH:$base_dir/share/java/kafka-serde-tools/*
+export CLASSPATH=$CLASSPATH:$base_dir/share/java/kafka-serde-tools/*:$base_dir/share/java/monitoring-interceptors/*
 
 # Development jars. `mvn package` should collect all the required dependency jars here
 for dir in $base_dir/package-kafka-serde-tools/target/kafka-serde-tools-package-*-development; do
